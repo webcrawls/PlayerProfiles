@@ -18,8 +18,14 @@
 
 package dev.kscott.playerprofiles;
 
+import com.google.inject.Guice;
+import com.google.inject.Inject;
+import com.google.inject.Injector;
 import com.google.inject.Singleton;
+import dev.kscott.playerprofiles.inject.CommandModule;
+import dev.kscott.playerprofiles.inject.PluginModule;
 import org.bukkit.plugin.java.JavaPlugin;
+import org.checkerframework.checker.nullness.qual.NonNull;
 
 /**
  * The main PlayerProfiles plugin class
@@ -30,6 +36,11 @@ public final class PlayerProfilesPlugin extends JavaPlugin {
     @Override
     public void onEnable() {
         // Plugin startup logic
+
+        final @NonNull Injector injector = Guice.createInjector(
+                new PluginModule(this),
+                new CommandModule(this)
+        );
 
     }
 
