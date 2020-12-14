@@ -18,12 +18,14 @@
 
 package dev.kscott.playerprofiles;
 
+import com.google.inject.Singleton;
 import org.bukkit.plugin.java.JavaPlugin;
 
 /**
  * The main PlayerProfiles plugin class
  */
-public final class PlayerProfiles extends JavaPlugin {
+@Singleton
+public final class PlayerProfilesPlugin extends JavaPlugin {
 
     @Override
     public void onEnable() {
