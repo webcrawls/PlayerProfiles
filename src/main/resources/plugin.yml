@@ -1,4 +1,4 @@
-name: PlayerProfiles
+name: Vanadinite
 version: @version@
-main: dev.kscott.playerprofiles.PlayerProfilesPlugin
+main: dev.kscott.playerprofiles.Vanadinite
 api-version: 1.16

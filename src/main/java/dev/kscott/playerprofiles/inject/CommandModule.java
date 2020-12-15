@@ -44,6 +44,7 @@ public class CommandModule extends AbstractModule {
 
     /**
      * Constructs the CommandModule
+     *
      * @param plugin Plugin reference
      */
     public CommandModule(final @NonNull Plugin plugin) {

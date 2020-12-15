@@ -19,7 +19,6 @@
 package dev.kscott.playerprofiles;
 
 import com.google.inject.Guice;
-import com.google.inject.Inject;
 import com.google.inject.Injector;
 import com.google.inject.Singleton;
 import dev.kscott.playerprofiles.inject.CommandModule;
@@ -31,7 +30,7 @@ import org.checkerframework.checker.nullness.qual.NonNull;
  * The main PlayerProfiles plugin class
  */
 @Singleton
-public final class PlayerProfilesPlugin extends JavaPlugin {
+public final class VanadinitePlugin extends JavaPlugin {
 
     @Override
     public void onEnable() {

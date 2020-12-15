@@ -19,7 +19,7 @@
 package dev.kscott.playerprofiles.inject;
 
 import com.google.inject.AbstractModule;
-import dev.kscott.playerprofiles.PlayerProfilesPlugin;
+import dev.kscott.playerprofiles.VanadinitePlugin;
 import net.kyori.adventure.platform.bukkit.BukkitAudiences;
 import org.bukkit.plugin.Plugin;
 import org.checkerframework.checker.nullness.qual.NonNull;
@@ -32,7 +32,7 @@ public class PluginModule extends AbstractModule {
     /**
      * The PlayerProfilesPlugin reference
      */
-    private final @NonNull PlayerProfilesPlugin plugin;
+    private final @NonNull VanadinitePlugin plugin;
 
     /**
      * The Audiences instance
@@ -41,9 +41,10 @@ public class PluginModule extends AbstractModule {
 
     /**
      * Constructs PluginModule
+     *
      * @param plugin PlayerProfilesPlugin reference
      */
-    public PluginModule(final @NonNull PlayerProfilesPlugin plugin) {
+    public PluginModule(final @NonNull VanadinitePlugin plugin) {
         this.plugin = plugin;
         this.audiences = BukkitAudiences.create(plugin);
     }
@@ -54,10 +55,9 @@ public class PluginModule extends AbstractModule {
     @Override
     public void configure() {
         this.bind(Plugin.class).toInstance(this.plugin);
-        this.bind(PlayerProfilesPlugin.class).toInstance(this.plugin);
+        this.bind(VanadinitePlugin.class).toInstance(this.plugin);
         this.bind(BukkitAudiences.class).toInstance(this.audiences);
     }
-
 
 
 }
