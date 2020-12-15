@@ -3,7 +3,6 @@ import org.apache.tools.ant.filters.ReplaceTokens
 plugins {
     id("java")
     id("java-library")
-    id("checkstyle")
     id("com.github.johnrengelman.shadow") version("6.1.0")
 }
 
@@ -32,8 +31,6 @@ repositories {
 }
 
 dependencies {
-    checkstyle("ca.stellardrift:stylecheck:0.1-SNAPSHOT")
-
     compileOnlyApi("org.checkerframework:checker-qual:3.5.0")
 
     compileOnlyApi("com.google.guava:guava:21.0")
