@@ -1,1 +1,1 @@
-rootProject.name = "Vanadinite"
+rootProject.name = "profiles"
