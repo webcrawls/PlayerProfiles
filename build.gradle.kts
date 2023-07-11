@@ -3,14 +3,14 @@ import org.apache.tools.ant.filters.ReplaceTokens
 plugins {
     id("java")
     id("java-library")
-    id("com.github.johnrengelman.shadow") version("6.1.0")
+    id("com.github.johnrengelman.shadow") version("8.1.1")
 }
 
 group = "dev.kscott"
 version = "1.0-SNAPSHOT"
 
 configure<JavaPluginConvention> {
-    sourceCompatibility = JavaVersion.VERSION_11
+    sourceCompatibility = JavaVersion.VERSION_17
     targetCompatibility = sourceCompatibility
 }
 
